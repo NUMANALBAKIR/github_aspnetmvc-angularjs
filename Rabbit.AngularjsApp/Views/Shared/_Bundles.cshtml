@@ -1,0 +1,19 @@
+﻿@{
+    var bundles = BundleTable.Bundles;
+
+    bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js",
+        "~/Scripts/angular-route.js",
+        "~/Scripts/angular-resource.js"));
+
+    bundles.Add(new ScriptBundle("~/bundles/app").IncludeDirectory("~/Scripts/app", "*.js", false)
+        .IncludeDirectory("~/Scripts/app/services", "*.js", false)
+        .IncludeDirectory("~/Scripts/app/controllers", "*.js", false));
+
+    bundles.Add(new ScriptBundle("~/bundles/jquery").Include("~/Scripts/jquery-2.*"));
+
+    bundles.Add(new ScriptBundle("~/bundles/jquery1").Include("~/Scripts/jquery-1.*"));
+
+    bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css", "~/Content/sticky-footer-navbar.css"));
+
+    bundles.Add(new StyleBundle("~/Content/css/bootstrap").Include("~/Content/bootstrap.css", "~/Content/bootstrap-theme.css"));
+}
