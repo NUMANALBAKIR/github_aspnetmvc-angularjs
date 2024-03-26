@@ -9,11 +9,11 @@
 
 
     <div class="row mb-3 bordered">
-        <div class="col-xs-4">
-            @{ Html.RenderPartial("_Partial"); }
-        </div>
-        <div class="col-xs-4" id="my_dataviz"></div>
+        @{ Html.RenderPartial("_Partial"); }
+        <div class="col-xs-4">b</div>
         <div class="col-xs-4">c</div>
+
+        <button class="btn btn-success" ng-click="increment()">increment</button>
     </div>
 
 
