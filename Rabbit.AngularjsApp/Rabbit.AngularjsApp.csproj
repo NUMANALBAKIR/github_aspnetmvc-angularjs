@@ -169,6 +169,7 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
     <Content Include="Scripts\app\controllers\Readme.txt" />
+    <Content Include="Scripts\app\controllers\_PartialController.js" />
     <Content Include="Scripts\app\controllers\WelcomeController.js" />
     <Content Include="Scripts\app\controllers\TestController.js" />
     <Content Include="Scripts\app\services\Readme.txt" />
@@ -205,6 +206,7 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Template\Test.cshtml" />
     <Content Include="Views\Template\Welcome.cshtml" />
+    <Content Include="Views\Template\_Partial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
