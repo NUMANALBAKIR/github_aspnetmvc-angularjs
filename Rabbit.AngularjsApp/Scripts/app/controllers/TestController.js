@@ -7,22 +7,30 @@
     app.controller('TestController', ['$scope', '$rootScope', 'SharedDataService', function ($scope, $rootScope, SharedDataService) {
 
         $scope.n = 3;
-
-        (function init() {
+        let sendData = function () {
             SharedDataService.setSharedData({ key: 'value is: ' + $scope.n });
             $rootScope.$emit('dataShared'); 
+        };
+
+
+        (function init() {
+            sendData();
         })();
 
 
         $scope.sendData = function () {
-            SharedDataService.setSharedData({ key: 'value is: ' + $scope.n });
+            SharedDataService.setData({ key: 'value is: ' + $scope.n });
             $rootScope.$emit('dataShared'); 
         };
 
         $scope.increment = function () {
             $scope.n++;
-            $scope.sendData();
+            sendData();
         };
+
+
+
+
 
     }]);
 
