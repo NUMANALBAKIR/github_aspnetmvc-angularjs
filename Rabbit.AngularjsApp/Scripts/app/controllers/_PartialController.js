@@ -3,7 +3,7 @@
 (function (angular) {
     var app = angular.module('app');
 
-    app.controller('_PartialController', ['$scope', '$rootScope', function ($scope, $rootScope) {
+    app.controller('_PartialController', ['$scope', '$rootScope', 'SharedDataService', function ($scope, $rootScope, SharedDataService) {
 
 
 
@@ -11,10 +11,9 @@
         $scope.dataFromControllerOne = 'initial_data';
 
         $rootScope.$on('dataShared', function (event, data) {
-            $scope.dataFromControllerOne = data.key;
+            var sharedData = SharedDataService.getData();
+            $scope.dataFromControllerOne = sharedData.key;
         });
-
-
 
 
 
