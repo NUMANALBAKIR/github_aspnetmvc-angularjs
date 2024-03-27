@@ -8,11 +8,11 @@
         $scope.pn = 'data on partial view';
 
         $scope.dataFromControllerOne = 'initial_data';
-        var initData = SharedDataService.getData();
+        var initData = SharedDataService.getSharedData();
         $scope.dataFromControllerOne = initData.key ? initData.key : 'initial_data';
 
         $rootScope.$on('dataShared', function () {
-            var updatedData = SharedDataService.getData();
+            var updatedData = SharedDataService.getSharedData();
             $scope.dataFromControllerOne = updatedData.key;
         });
 

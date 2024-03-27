@@ -173,6 +173,7 @@
     <Content Include="Scripts\app\controllers\WelcomeController.js" />
     <Content Include="Scripts\app\controllers\TestController.js" />
     <Content Include="Scripts\app\services\Readme.txt" />
+    <Content Include="Scripts\app\services\SharedDataService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
