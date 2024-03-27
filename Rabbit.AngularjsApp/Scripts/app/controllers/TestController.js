@@ -23,14 +23,16 @@
     app.controller('TestController', ['$scope', '$rootScope', 'SharedDataService', function ($scope, $rootScope, SharedDataService) {
 
         $scope.n = 3;
+
         (function init() {
             SharedDataService.setData({ key: 'value is: ' + $scope.n });
-            $rootScope.$emit('dataShared'); // Optionally notify others of the change
+            $rootScope.$emit('dataShared'); 
         })();
 
 
         $scope.sendData = function () {
-            $rootScope.$emit('dataShared', { key: 'value is: ' + $scope.n });
+            SharedDataService.setData({ key: 'value is: ' + $scope.n });
+            $rootScope.$emit('dataShared'); 
         };
 
         $scope.increment = function () {

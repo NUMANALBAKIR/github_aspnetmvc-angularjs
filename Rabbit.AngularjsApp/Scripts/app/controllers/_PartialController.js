@@ -5,16 +5,16 @@
 
     app.controller('_PartialController', ['$scope', '$rootScope', 'SharedDataService', function ($scope, $rootScope, SharedDataService) {
 
-
-
         $scope.pn = 'data on partial view';
+
         $scope.dataFromControllerOne = 'initial_data';
+        var initData = SharedDataService.getData();
+        $scope.dataFromControllerOne = initData.key ? initData.key : 'initial_data';
 
-        $rootScope.$on('dataShared', function (event, data) {
-            var sharedData = SharedDataService.getData();
-            $scope.dataFromControllerOne = sharedData.key;
+        $rootScope.$on('dataShared', function () {
+            var updatedData = SharedDataService.getData();
+            $scope.dataFromControllerOne = updatedData.key;
         });
-
 
 
 
