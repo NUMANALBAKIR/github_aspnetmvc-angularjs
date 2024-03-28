@@ -17,12 +17,12 @@
         });
 
 
-        // Assuming d3 version 3 is passed
+        // Assuming d3 version 6 is passed
         let draw = function (d3) {
             // set the dimensions and margins of the graph
-            const width = 400,
-                height = 400,
-                margin = 40;
+            const width = 200,
+                height = 200,
+                margin = 20;
 
             // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
             const radius = Math.min(width, height) / 2 - margin;
