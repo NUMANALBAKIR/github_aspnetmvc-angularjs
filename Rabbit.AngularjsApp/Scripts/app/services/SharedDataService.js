@@ -12,16 +12,6 @@
             sharedData = data;
         };
 
-
-        var script = {};
-        this.getScript = function () {
-            return script;
-        };
-        this.setScript = function (data) {
-            script = data;
-        };
-
-
     });
 
 })(angular);

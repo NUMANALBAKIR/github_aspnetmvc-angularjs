@@ -5,20 +5,13 @@
 
     app.controller('_PartialController', ['$scope', '$rootScope', 'SharedDataService', function ($scope, $rootScope, SharedDataService) {
 
-        $scope.pn = 'data on partial view';
+        $scope.pn = 'written on partial view';
 
-        $scope.dataFromControllerOne = 'initial_data';
         var initData = SharedDataService.getSharedData();
-        $scope.dataFromControllerOne = initData.key ? initData.key : 'initial_data';
-
-        $rootScope.$on('dataShared', function () {
-            var updatedData = SharedDataService.getSharedData();
-            $scope.dataFromControllerOne = updatedData.key;
-        });
+        $scope.dataFromControllerOne = initData.key ? initData.key : -1;
 
 
-        // Assuming d3 version 6 is passed
-        let draw = function (d3) {
+        let draw = function () {
             // set the dimensions and margins of the graph
             const width = 200,
                 height = 200,
@@ -62,10 +55,13 @@
                 .style("opacity", 0.7)
         };
 
-        $rootScope.$on('script', function () {
-            var data = SharedDataService.getScript();
-            draw(data.key);
+        draw();
+
+        $rootScope.$on('dataShared', function () {
+            var updatedData = SharedDataService.getSharedData();
+            $scope.dataFromControllerOne = updatedData.key;
         });
+
 
     }]);
 })(angular);

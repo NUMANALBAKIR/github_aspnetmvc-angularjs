@@ -9,7 +9,7 @@
 
 
     <div class="row mb-3 bordered">
-        @{ Html.RenderPartial("_Partial"); }
+        <div class="col-xs-4" ng-controller="_PartialController">@{ Html.RenderPartial("_Partial"); } </div>
         <div class="col-xs-4">b</div>
         <div class="col-xs-4">c</div>
 
