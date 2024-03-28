@@ -17,20 +17,10 @@
             sendData();
         })();
 
-
-        $scope.sendData = function () {
-            SharedDataService.setData({ key: 'value is: ' + $scope.n });
-            $rootScope.$emit('dataShared'); 
-        };
-
         $scope.increment = function () {
             $scope.n++;
             sendData();
         };
-
-
-
-
 
     }]);
 
