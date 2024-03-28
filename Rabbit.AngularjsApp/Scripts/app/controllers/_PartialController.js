@@ -17,31 +17,8 @@
         });
 
 
-
-
-        // Assuming d3 version 3 is loaded globally
-
-        // Function to dynamically load D3 v6.6 using Promise
-        function loadD3v6() {
-            return new Promise((resolve, reject) => {
-                var script = document.createElement('script');
-                script.src = 'https://d3js.org/d3.v6.min.js'; // URL to D3 v6.6
-                script.onload = () => resolve(d3); // Resolve the promise with d3 v6
-                script.onerror = reject; // Reject the promise on error
-                document.head.appendChild(script);
-            });
-        }
-
-        // Use the loadD3v6 function with a promise
-        loadD3v6().then(d3v6 => {
-            // d3v6 is now locally available
-            console.log('--- D3 version inside controller:', d3v6.version);
-
-            //--- Example usage of d3v6 ---
-
-
-
-
+        // Assuming d3 version 3 is passed
+        let draw = function (d3) {
             // set the dimensions and margins of the graph
             const width = 400,
                 height = 400,
@@ -83,18 +60,12 @@
                 .attr("stroke", "black")
                 .style("stroke-width", "2px")
                 .style("opacity", 0.7)
+        };
 
-
-
-
-            // example usage ends
-
-        }).catch(error => {
-            console.error('Failed to load D3 v6:', error);
+        $rootScope.$on('script', function () {
+            var data = SharedDataService.getScript();
+            draw(data.key);
         });
-
-
-
 
     }]);
 })(angular);
