@@ -21,7 +21,7 @@
 
 <div ng-app="app" ng-controller="WelcomeController">
     <form>
-        <select ng-model="form.selectedItem" ng-change="changedYear()">
+        <select ng-model="selectedItem" ng-change="changedYear()">
             <option value="">Select an option</option>
             <option ng-repeat="y in years" value="{{y}}">
                 {{y}}

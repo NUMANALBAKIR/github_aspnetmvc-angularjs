@@ -17,18 +17,9 @@
 
         $scope.years = ["2019", "2020", "2021"];
 
-        //$scope.$watch('form.YEAR', function (newValue, oldValue) {
-
-        //    if (newValue !== oldValue) { // To avoid alerting on initialization
-        //        alert('year changed to: ' + newValue);
-        //    }
-
-        //});
-        //
-
         $scope.changedYear = function () {
             $scope.form.YEAR = $scope.selectedItem;
-            alert('New value selected: ' + $scope.form.selectedItem);
+            alert('New value selected: ' + $scope.form.YEAR);
         };
 
 
