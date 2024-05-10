@@ -128,7 +128,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ServicesConfiguration\ServicesModule.cs" />
+    <Compile Include="Controllers\AluController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\Test2Controller.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -208,6 +210,8 @@
     <Content Include="Views\Template\Test.cshtml" />
     <Content Include="Views\Template\Welcome.cshtml" />
     <Content Include="Views\Template\_Partial.cshtml" />
+    <Content Include="Views\Test2\Index.cshtml" />
+    <Content Include="Views\Alu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

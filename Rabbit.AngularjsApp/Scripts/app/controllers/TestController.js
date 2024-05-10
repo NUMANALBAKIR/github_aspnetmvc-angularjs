@@ -18,7 +18,6 @@
 
         $scope.myInit = function () {
             sendData();
-
         };
 
 
